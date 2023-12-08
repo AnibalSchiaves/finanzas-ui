@@ -14,6 +14,9 @@
                 <span>Cantidad</span>
             </th>
             <th class="cell cell-title">
+                <span>Cotización</span>
+            </th>
+            <th class="cell cell-title">
                 <span>Comisión</span>
             </th>
             <th class="cell cell-title">
@@ -35,6 +38,7 @@
             <td class="cell"><span>{{ operacion.operacion }}</span></td>
             <td class="cell"><span>{{ operacion.fechaHora | date:'dd/MM/yyyy hh:mm' }}</span></td>
             <td class="cell"><span>{{ operacion.cantidad }}</span></td>
+            <td class="cell"><span>{{ operacion.cotizacion | currency }}</span></td>
             <td class="cell"><span>{{ operacion.comision | currency }}</span></td>
             <td class="cell"><span>{{ operacion.impuestos | currency }}</span></td>
             <td class="cell"><span>{{ operacion.monto | currency }}</span></td>

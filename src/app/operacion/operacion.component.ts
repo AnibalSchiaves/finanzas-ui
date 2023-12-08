@@ -13,8 +13,13 @@ export class OperacionComponent implements OnInit {
 
   
   operacionForm = new FormGroup({
-    ticker: new FormControl({value: '', disabled: true}),
-    tipoOper: new FormControl({value: '', disabled: true})
+    ticker: new FormControl({value: '', disabled: false}),
+    tipoOper: new FormControl({value: '', disabled: false}),
+    cantidad: new FormControl({value: 0, disabled: false}),
+    cotizacion: new FormControl({value: 0, disabled: false}),
+    comision: new FormControl({value: 0, disabled: false}),
+    impuestos: new FormControl({value: 0, disabled: false}),
+    monto: new FormControl({value: 0, disabled: false}),
   });
 
   constructor(

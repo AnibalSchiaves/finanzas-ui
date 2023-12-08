@@ -44,7 +44,7 @@ export interface Operacion {
     cantidad: number,
     comision: number,
     impuestos: number,
-    precioUnitario: number,
+    cotizacion: number,
     monto: number,
     rendimiento:number,
     rendimientoAnual: number
