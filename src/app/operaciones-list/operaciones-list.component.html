@@ -1,0 +1,54 @@
+<div>
+    <h2>Operaciones para {{ activo?.nombre }}</h2>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th class="cell cell-title">
+                <span>Operación</span>
+            </th>
+            <th class="cell cell-title">
+                <span>Fecha</span>
+            </th>
+            <th class="cell cell-title">
+                <span>Cantidad</span>
+            </th>
+            <th class="cell cell-title">
+                <span>Comisión</span>
+            </th>
+            <th class="cell cell-title">
+                <span>Impuestos</span>
+            </th>
+            <th class="cell cell-title">
+                <span>Monto</span>
+            </th>
+            <th class="cell cell-title">
+                <span>Rendimiento</span>
+            </th>
+            <th class="cell cell-title">
+                <span>Anualizado</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let operacion of operaciones | async">
+            <td class="cell"><span>{{ operacion.operacion }}</span></td>
+            <td class="cell"><span>{{ operacion.fechaHora | date:'dd/MM/yyyy hh:mm' }}</span></td>
+            <td class="cell"><span>{{ operacion.cantidad }}</span></td>
+            <td class="cell"><span>{{ operacion.comision | currency }}</span></td>
+            <td class="cell"><span>{{ operacion.impuestos | currency }}</span></td>
+            <td class="cell"><span>{{ operacion.monto | currency }}</span></td>
+            <td class="cell"><span>{{ operacion.rendimiento }}</span></td>
+            <td class="cell"><span>{{ operacion.rendimientoAnual }}</span></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td class="cell"><button [routerLink]="['/operacion',activo?.id,'Compra']">Ampliar</button></td>
+            <td class="cell" *ngIf="activo?.tipo === 'Bono'"><button >Renta</button></td>
+            <td class="cell" *ngIf="activo?.tipo === 'Bono'"><button >Amortización</button></td>
+            <td class="cell" *ngIf="activo?.tipo === 'Acción'"><button >Dividendo</button></td>
+            <td class="cell"><button routerLink="/">Volver</button></td>
+        </tr>
+    </tfoot>
+</table>

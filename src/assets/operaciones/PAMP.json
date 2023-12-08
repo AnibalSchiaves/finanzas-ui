@@ -1,0 +1,14 @@
+[
+    {
+        "id":1,
+        "operacion": "Compra",
+        "fechaHora": "2023-06-01 10:00:00.000-03",
+        "cantidad": 10,
+        "comision": 25,
+        "impuestos":5,
+        "monto": 4000,
+        "precioUnitario": 400,
+        "rendimiento": 25,
+        "rendimientoAnual":100
+    }
+]

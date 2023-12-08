@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                display: flex;
+                margin: 1em;
+            }
+            .cell {
+                padding: 0.2em 1em 0.2em 1em;
+                flex-flow: column;
+                flex-wrap: wrap;
+                background-color:lightcyan;
+            }
+            .width-s {
+                width: 10%;
+                min-width: 5em;
+            }
+            .width-m {
+                width: 20%;
+            }
+            .cell-title {
+                font-weight: bold;
+                background-color:aquamarine;
+            }
+            .cell-title span {
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <div class="cell width-s cell-title">
+                    <span>Ticker</span>
+                </div>
+                <div class="cell width-m cell-title">
+                    <span>Nombre</span>
+                </div>
+                <div class="cell width-s cell-title">
+                    <span>Cotización</span>
+                </div>
+                <div class="cell width-s cell-title">
+                    <span>Rendiento</span>
+                </div>
+                <div class="cell width-s cell-title">
+                    <span>Rend. Anual</span>
+                </div>
+            </li>
+            <li>
+                <div class="cell width-s">
+                    <h3>PAMP</h3>
+                </div>
+                <div class="cell width-m">
+                    <span>Pampa Energía</span>
+                </div>
+                <div class="cell width-s">
+                    <span>100,20</span>
+                </div>
+                <div class="cell width-s">
+                    <span>45%</span>
+                </div>
+                <div class="cell width-s">
+                    <span>150%</span>
+                </div>
+            </li>
+            <li>
+                <div class="cell width-s">
+                    <h3>AMZN</h3>
+                </div>
+                <div class="cell width-m">
+                    <span>Amazon</span>
+                </div>
+                <div class="cell width-s">
+                    <span>300,20</span>
+                </div>
+                <div class="cell width-s">
+                    <span>30%</span>
+                </div>
+                <div class="cell width-s">
+                    <span>110%</span>
+                </div>
+            </li>
+        </ul>
+    </body>
+</html>

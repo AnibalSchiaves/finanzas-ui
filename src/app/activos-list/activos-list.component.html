@@ -1,0 +1,49 @@
+<div>
+    <h2>Activos</h2>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th class="cell cell-title">
+                <span>Ticker</span>
+            </th>
+            <th class="cell cell-title width-l">
+                <span>Nombre</span>
+            </th>
+            <th class="cell cell-title">
+                <span>Cantidad</span>
+            </th>
+            <th class="cell cell-title">
+                <span>Cotización</span>
+            </th>
+            <th class="cell cell-title">
+                <span>Valorizado</span>
+            </th>
+            <th class="cell cell-title">
+                <span>Rendimiento</span>
+            </th>
+            <th class="cell cell-title">
+                <span>Anualizado</span>
+            </th>
+            <th class="cell cell-title">
+                <span>Acciones</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let activo of activos">
+            <td class="cell"><span>{{activo.ticker}}</span></td>
+            <td class="cell cell-width-l"><span>{{activo.nombre}}</span></td>
+            <td class="cell"><span>{{activo.cantidad}}</span></td>
+            <td class="cell"><span>{{activo.cotizacion | currency}}</span></td>
+            <td class="cell"><span>{{activo.valorizado | currency}}</span></td>
+            <td class="cell"><span>{{activo.rendimiento}}</span></td>
+            <td class="cell"><span>{{activo.rendimientoAnual}}</span></td>
+            <td>
+                <button [routerLink]="['/operaciones',activo.id]" type="button">
+                    Operaciones
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

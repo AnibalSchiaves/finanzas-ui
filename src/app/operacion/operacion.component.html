@@ -1,0 +1,13 @@
+<form [formGroup]="operacionForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="ticker">Ticker</label>
+        <input id="ticker" type="text" formControlName="ticker" >
+    </div>
+    <div>
+        <label for="ticker">Tipo de Operación</label>
+        <input id="tipoOper" type="text" formControlName="tipoOper" >
+    </div>
+
+    <button class="button" type="submit">Confirmar</button>
+
+</form>
